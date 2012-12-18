@@ -1,19 +1,20 @@
 package de.tud.cs.gdi1.scheme_to_java;
 
 import static java.lang.System.out;
+import static java.lang.String.valueOf;
 
 public class Base3 {
 
     static String toBase3Recursive(int value) {
         if (value >= 3) {
-            return toBase3Recursive(value / 3) + String.valueOf(value % 3);
+            return toBase3Recursive(value / 3) + valueOf(value % 3);
         } else {
-            return String.valueOf(value % 3);
+            return valueOf(value % 3);
         }
     }
 
     static String toBase3Recursive2(int value) {
-        return (value >= 3 ? toBase3Recursive2(value / 3) : "") + String.valueOf(value % 3);
+        return (value >= 3 ? toBase3Recursive2(value / 3) : "") + valueOf(value % 3);
     }
 
     @SuppressWarnings("all")
