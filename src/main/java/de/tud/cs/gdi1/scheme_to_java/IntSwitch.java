@@ -5,7 +5,10 @@ public class IntSwitch {
 
         switch (Integer.valueOf(args[0]).intValue()) {
         case 0:
-            System.out.print("0");
+            System.out.print("0");            
+            break;
+        case 1:
+            System.out.print("-1");
             break;
         default:
             System.out.println("etwas anderes");
