@@ -11,6 +11,8 @@ import java.lang.annotation.Target;
 @Target(value = { ElementType.TYPE, ElementType.METHOD })
 public @interface Requirement {
 
+    String value();
+    
     String id();
 
     String author() default "Unknown";
