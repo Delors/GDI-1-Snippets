@@ -6,7 +6,7 @@ public class SquareTest {
 
     // The following test will fail and by that demonstrates that it is not
     // sufficient that two classes A and B that are in "A is-a B" relation
-    // with respect to the target domain actually inherit from each other.
+    // - with respect to the target domain - actually inherit from each other.
 
     @org.junit.Test
     public void main() {
