@@ -7,5 +7,8 @@ Hinweis
 =======
 
 Dies ist im Wesentlichen der Sourcecode, der im Rahmen der Vorlesung entwickelt oder gezeigt wurde. 
-Der Code dient jediglich der Veranschaulichung bzw. Diskussion bestimmter Ideen und Konzepte. 
+Der Code dient jediglich der Veranschaulichung bzw. Diskussion bestimmter Ideen und Konzepte. In vielen Fällen enthält 
+Java bereits Klassen, die die entsprechende Funktionalität anbieten und die auch in realen Projekten verwendet werden 
+sollten.
+
 
