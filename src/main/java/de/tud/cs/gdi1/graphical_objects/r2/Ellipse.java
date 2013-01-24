@@ -1,13 +1,25 @@
 package de.tud.cs.gdi1.graphical_objects.r2;
 
+import java.awt.Graphics2D;
+
 public class Ellipse extends ColorableFigure {
 
     private int width;
     private int height;
 
-    public Ellipse(int width, int height) {
+    private Point center;
+
+    public Ellipse(Point center, int width, int height) {
         this.width = width;
         this.height = height;
+    }
+
+    public Point getCenter() {
+        return center;
+    }
+
+    public void setCenter(Point center) {
+        this.center = center;
     }
 
     public int getHeight() {
@@ -35,6 +47,12 @@ public class Ellipse extends ColorableFigure {
     @Override
     public double getArea() {
         return Math.PI * getHeight() * getWidth();
+    }
+
+    @Override
+    public void paint(Graphics2D g) {
+        g.drawOval(center.getX() - width / 2, center.getY() - height / 2, width, height);
+
     }
 
 }

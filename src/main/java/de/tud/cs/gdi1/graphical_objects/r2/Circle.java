@@ -1,11 +1,16 @@
 package de.tud.cs.gdi1.graphical_objects.r2;
 
+import java.awt.Graphics2D;
+
 public class Circle extends ColorableFigure {
 
     private int r;
 
-    public Circle(int radius) {
+    private Point center;
+
+    public Circle(Point center, int radius) {
         this.r = radius;
+        this.center = center;
     }
 
     public int getR() {
@@ -14,6 +19,14 @@ public class Circle extends ColorableFigure {
 
     public void setR(int radius) {
         this.r = radius;
+    }
+
+    public Point getCenter() {
+        return center;
+    }
+
+    public void setCenter(Point center) {
+        this.center = center;
     }
 
     @Override
@@ -25,5 +38,10 @@ public class Circle extends ColorableFigure {
     public double getArea() {
 
         return Math.PI * r * r;
+    }
+
+    @Override
+    public void paint(Graphics2D g) {
+        g.drawOval(center.getX(), center.getY(), r, r);
     }
 }

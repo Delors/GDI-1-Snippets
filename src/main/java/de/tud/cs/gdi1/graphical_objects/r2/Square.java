@@ -1,26 +1,38 @@
 package de.tud.cs.gdi1.graphical_objects.r2;
 
+import java.awt.Graphics2D;
 
 public class Square extends ColorableFigure {
 
-    private double a;
+    private int length;
 
-    public Square(double length) {
-        this.a = length;
+    private Point upperLeftCorner;
+
+    public Square(Point upperLeftCorner, int length) {
+        this.length = length;
+        this.upperLeftCorner = upperLeftCorner;
     }
 
-    public double getA() {
-        return a;
+    public Point getUpperLeftCorner() {
+        return upperLeftCorner;
+    }
+
+    public double getLength() {
+        return length;
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * a;
+        return 4 * length;
     }
 
     @Override
     public double getArea() {
-        return a * a;
+        return length * length;
     }
 
+    @Override
+    public void paint(Graphics2D g) {
+        g.drawRect(upperLeftCorner.getX(), upperLeftCorner.getY(), length, length);
+    }
 }
