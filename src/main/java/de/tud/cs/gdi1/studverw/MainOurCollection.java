@@ -30,19 +30,19 @@ public class MainOurCollection {
 
         // USING OUR GENERIC_LINKED_LIST -------------------------------------------------------
         List<Student> gListOfStudents = new List<>(s2, new List<>(s1));
-        Object v3 = gListOfStudents.getValue().getGivenName();
+        Object v3 = gListOfStudents.getHead().getGivenName();
         System.out.println(v3);
 
-        List<? extends Student> filteredGListOfStudents = gListOfStudents.filter(new PersonFilter(
+        List<Student> filteredGListOfStudents = gListOfStudents.filter(new PersonFilter(
                 "Max", "Müller"));
         System.out.println(filteredGListOfStudents);
 
         List<Dozent> gListOfDozent = new List<>(dozent);
-        Object v4 = gListOfDozent.getValue().getTutor();
+        Object v4 = gListOfDozent.getHead().getTutor();
         System.out.println(v4);
 
-        List<Person> gListOfGDIPersons = new List<>(dozent, gListOfStudents);
-        Object v5 = gListOfGDIPersons.getValue().getGivenName();
+        List<Person> gListOfGDIPersons = new List<Person>(dozent, gListOfStudents);
+        Object v5 = gListOfGDIPersons.getHead().getGivenName();
         System.out.println(v5);
 
     }

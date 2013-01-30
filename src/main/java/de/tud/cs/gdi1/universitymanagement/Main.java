@@ -20,14 +20,14 @@ public class Main {
         List<Student> students = new List<>(s2, new List<>(s1));
 
         students.filter(new PersonNameFilter("Eichberg"));
-        List<Person> persons = new List<>(d, students);
+        List<Person> persons = new List<Person>(d, students);
 
         List<?> filteredList = persons.filter(new PersonNameFilter("Eichberg"));
         System.out.println(filteredList);
 
         List<? extends Person> rest = persons;
         while (rest != null) {
-            Person s = rest.getValue();
+            Person s = rest.getHead();
             System.out.println(s.getName().getFormOfAddress());
 
             rest = rest.getRest();

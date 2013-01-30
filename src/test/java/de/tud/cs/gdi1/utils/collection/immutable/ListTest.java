@@ -20,7 +20,7 @@ public class ListTest {
         List l = new List("2nd");
         Object first = "1st";
         List l2 = new List(first, l); // prepend an element
-        assertEquals(first, l2.getValue());
+        assertEquals(first, l2.getHead());
     }
 
     @Test
