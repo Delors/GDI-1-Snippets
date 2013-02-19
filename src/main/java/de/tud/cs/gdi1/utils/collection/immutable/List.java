@@ -24,7 +24,7 @@ public class List<E> { // generische Klasse
 
     // generische Methode
     public static <E, T extends E, S extends E> List<E> prepend(T e, List<S> list) {
-        return new List<>(e, list);
+        return new List<E>(e, list);
     }
     
     public List<E> filter(Filter<? super E> f) {
@@ -52,6 +52,7 @@ public class List<E> { // generische Klasse
 
     public static void main(String[] args) throws Exception {
         // GENERAL RULE: TRY TO AVOID MIXING GENERICS AND ARRAYS
+        @SuppressWarnings("unchecked")
         List<Person>[] myArrayOfLists = (List<Person>[]) new List<?>[20]; // arrays are covariant in
                                                                           // Java due to historical
                                                                           // reasons!

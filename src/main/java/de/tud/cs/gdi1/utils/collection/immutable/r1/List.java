@@ -1,6 +1,7 @@
 package de.tud.cs.gdi1.utils.collection.immutable.r1;
 
 import de.tud.cs.gdi1.studverw.Dozent;
+import de.tud.cs.gdi1.studverw.Person;
 
 public class List<E> { // generische Klasse
 
@@ -38,9 +39,10 @@ public class List<E> { // generische Klasse
         return head + (rest == null ? "" : ", "+rest.toString()); 
     }
 
-    public static void main(String[] args) throws Exception {
+    @SuppressWarnings("unused") public static void main(String[] args) throws Exception {
         // List<Person> l = new List<>(new Dozent("Michael", "Eichberg")); // doesn't compile,
-        // because the wrong type is inferred
+        // the wrong type is inferred
+        List<Person> l = new List<Person>(new Dozent("Michael", "Eichberg")); 
         
         List<Dozent> ld = new List<Dozent>(new Dozent("Michael", "Eichberg"));
         // doesn't compile: ld.prepend(new Student("Max", "Müller"));
