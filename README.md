@@ -1,7 +1,7 @@
 GDI-1-Snippets
 ==============
 
-Java Sourcecode mit Bezug zur Vorlesung "Grundlagen der Informatik 1 (GDI 1)" an der Technischen Universität Darmstadt, Fachbereich Informatik
+Java Sourcecode mit Bezug zur Vorlesung "Grundlagen der Informatik 1 (GDI 1) - im Wintersemester 2012/2013" an der Technischen Universität Darmstadt, Fachbereich Informatik
 
 Hinweis
 =======
