@@ -50,6 +50,12 @@ public class List<E> { // generische Klasse
         return s;
     }
 
+   
+    public <O> O map (MapFunction<? super E,O> m){
+        return m.apply(head);
+    }
+    
+    
     public static void main(String[] args) throws Exception {
         // GENERAL RULE: TRY TO AVOID MIXING GENERICS AND ARRAYS
         @SuppressWarnings("unchecked")
