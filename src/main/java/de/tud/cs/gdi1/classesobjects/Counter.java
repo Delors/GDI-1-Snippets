@@ -9,7 +9,7 @@ class Counter {
         value = initialValue;
     }
 
-    @Requirement(author="Michael Eichberg",id="101",value = "when the methods returns the value is larger than before")
+    @Requirement(author="Michael Eichberg",id="101",value = "when the methods returns the value it is larger than before")
     public int inc() {
         value = value + 1;
         return value;
